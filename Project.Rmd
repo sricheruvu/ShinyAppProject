@@ -22,10 +22,10 @@ The user can slice and analyse the data in a pair wise format and try different 
 
 ## Application Hosting
 The Shiny application created for this project can be found at:
-<https://sricheruvu.shinyapps.io/Application/>
+<https://sricheruvu.shinyapps.io/ShinyAppProject/>
 
-The presentation for this project can be found at:
-<http://rpubs.com/sricheruvu/>
+This presentation cab be found at:
+<http://rpubs.com/sricheruvu/ShinyAppProject>
 
 ## Application User Instructions
 The following are the steps the user needs to do to run this application:

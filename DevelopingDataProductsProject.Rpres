@@ -1,0 +1,52 @@
+Developing Data Products Project
+========================================================
+author: Sriram Cheruvu
+date: August 7th, 2018
+autosize: true
+
+Introduction
+========================================================
+
+The key goal of this project is to build and publish a ShinyApp (shinyapp.io) using the IRIS dataset and illustrates how k-based clustering works when the user dynamically selects the following:
+ - X variable
+ - Y variable
+ - Cluster Size:  In addition, the user is provided with the option to select the cluster size (between 1 to 7 clusters). 
+
+The user can slice and analyse the data in a pair wise format and try different options in specifying the number of clusters.
+
+Application Hosting and Instructions
+=========================================================
+right: 30%
+
+This presentation cab be found at:
+<http://rpubs.com/sricheruvu/ShinyAppProject>
+
+The Shiny application created for this project can be found at:
+<https://sricheruvu.shinyapps.io/ShinyAppProject/>
+
+The following are the steps the user needs to do to run this application:
+
+1. Identify pairwise clusters in the IRIS dataset by:
+     - Selecting X variable.
+     - Selecting Y variable.
+2. Select number of clusters (between 1 to 7 clusters)
+
+***
+<div align="center">
+![alt text](ShinyApp.png)
+
+Output - Statistical Data
+========================================================
+For example if the user selects x variable - Sepal.Length and y variable - Sepal.Width along with cluster size of 3, the following kmeans will be generated:
+```{r echo=FALSE, warning=FALSE}
+kmeans(iris$Sepal.Length,iris$Sepal.Width, centers=3)
+```
+
+Output - Plot and Conclusion
+========================================================
+The corresponding graph is shown below.
+```{r, echo=FALSE, warning=FALSE}
+plot(iris$Sepal.Length,iris$Sepal.Width,col=3,pch=20,cex=1,points(3, pch=3, cex=4, lwd=2))
+```
+***
+We used shiny application to demonstrate how flexible the output can be based on the input parameters selected by the user. Clustering using K means have been used to cluster the data from the IRIS dataset based on the inputs selected.

@@ -130,7 +130,7 @@ $(document).ready(function () {
 
 <div id="overview" class="section level2">
 <h2>Overview</h2>
-<p>This project builds a ShinyApp using the IRIS dataset and illustrates how k based clustering works when the user dynamically selects the X and Y variables from the IRIS dataset.In addition, the user is provided with the option to select the cluster size (between 2 to 5 clusters).</p>
+<p>This project builds a ShinyApp using the IRIS dataset and illustrates how k based clustering works when the user dynamically selects the X and Y variables from the IRIS dataset.In addition, the user is provided with the option to select the cluster size (between 1 to 7 clusters).</p>
 <p>The user can slice and analyse the data in a pair wise format and try different options in specifying the number of clusters.</p>
 </div>
 <div id="project-instructions" class="section level2">
@@ -144,7 +144,7 @@ $(document).ready(function () {
 </div>
 <div id="application-hosting" class="section level2">
 <h2>Application Hosting</h2>
-<p>The Shiny application created for this project can be found at: <a href="https://sricheruvu.shinyapps.io/Application/" class="uri">https://sricheruvu.shinyapps.io/Application/</a></p>
+<p>The Shiny application created for this project can be found at: <a href="https://sricheruvu.shinyapps.io/ShinyAppProject/" class="uri">https://sricheruvu.shinyapps.io/ShinyAppProject/</a></p>
 <p>The presentation for this project can be found at: <a href="http://rpubs.com/sricheruvu/" class="uri">http://rpubs.com/sricheruvu/</a></p>
 </div>
 <div id="application-user-instructions" class="section level2">
@@ -156,7 +156,7 @@ $(document).ready(function () {
 <li>Selecting X variable.</li>
 <li>Selecting Y variable.</li>
 </ol></li>
-<li>Select number of clusters (between 2 to 5 clusters)</li>
+<li>Select number of clusters (between 1 to 7 clusters)</li>
 </ol>
 <p>Depending on the inputs the app will cluster the observations into the number of clusters specified.</p>
 <pre class="r"><code>summary(iris)</code></pre>
@@ -183,24 +183,24 @@ $(document).ready(function () {
 ## 5          5.0         3.6          1.4         0.2  setosa
 ## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
 <p>For example if the user selects x variable - Sepal.Length and y variable - Sepal.Width along with cluster size of 3, the following kmeans will be generated and graphed.</p>
-<pre><code>## K-means clustering with 3 clusters of sizes 59, 61, 30
+<pre><code>## K-means clustering with 3 clusters of sizes 65, 20, 65
 ## 
 ## Cluster means:
 ##       [,1]
-## 1 5.018644
-## 2 6.047541
-## 3 7.050000
+## 1 5.072308
+## 2 7.235000
+## 3 6.186154
 ## 
 ## Clustering vector:
-##   [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-##  [36] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 2 3 1 2 2 2 1 3 1 1 2 2 2 2 3 2 2 2 2
-##  [71] 2 2 2 2 2 3 3 3 2 2 1 1 2 2 1 2 3 2 2 1 1 2 2 1 2 2 2 2 1 2 2 2 3 2 2
-## [106] 3 1 3 3 3 2 2 3 2 2 2 2 3 3 2 3 2 3 2 3 3 2 2 2 3 3 3 2 2 2 3 2 2 2 3
-## [141] 3 3 2 3 3 3 2 2 2 2
+##   [1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 3 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+##  [36] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 3 2 1 3 3 3 1 3 1 1 3 3 3 1 3 1 3 3 1
+##  [71] 3 3 3 3 3 3 2 3 3 3 1 1 3 3 1 3 3 3 1 1 1 3 3 1 1 3 3 3 1 3 3 3 2 3 3
+## [106] 2 1 2 3 2 3 3 2 3 3 3 3 2 2 3 2 1 2 3 3 2 3 3 3 2 2 2 3 3 3 2 3 3 3 2
+## [141] 3 2 3 2 3 3 3 3 3 3
 ## 
 ## Within cluster sum of squares by cluster:
-## [1] 5.929492 5.252131 4.635000
-##  (between_SS / total_SS =  84.5 %)
+## [1] 7.770154 2.565500 6.817538
+##  (between_SS / total_SS =  83.2 %)
 ## 
 ## Available components:
 ## 

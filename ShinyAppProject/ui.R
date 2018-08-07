@@ -11,7 +11,7 @@ shinyUI(pageWithSidebar(
                 selected=names(iris)[[2]]),
     numericInput('clusters', 'Select cluster count (max 7):', 1,
                  min = 1, max = 7),
-    a("Click here for Documentation & readme",href="https://github.com/sricheruvu/ShinyAppProject/ShinyAppProject"),
+    a("Click here for Documentation & readme",href="https://github.com/sricheruvu/ShinyAppProject"),
     br(),
     br(),
     strong(p("Instructions:")),
