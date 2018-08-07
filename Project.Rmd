@@ -1,0 +1,56 @@
+---
+title: "Developing Data Product Project"
+author: "Sriram Cheruvu"
+date: "August 7, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+This project builds a ShinyApp using the IRIS dataset and illustrates how k based clustering works when the user dynamically selects the X and Y variables from the IRIS dataset.In addition, the user is provided with the option to select the cluster size (between 1 to 7 clusters). 
+
+The user can slice and analyse the data in a pair wise format and try different options in specifying the number of clusters.
+
+## Project Instructions
+1) Write a shiny application with associated supporting documentation. The documentation should be thought of as whatever a user will need to get started using your application.
+2) Deploy the application on Rstudio's shiny server
+3) Share the application link by pasting it into the provided text box
+4) Share your server.R and ui.R code on github
+
+## Application Hosting
+The Shiny application created for this project can be found at:
+<https://sricheruvu.shinyapps.io/Application/>
+
+The presentation for this project can be found at:
+<http://rpubs.com/sricheruvu/>
+
+## Application User Instructions
+The following are the steps the user needs to do to run this application:
+
+1. Identify pairwise clusters in the IRIS dataset by:
+    a. Selecting X variable.
+    b. Selecting Y variable.
+2. Select number of clusters (between 1 to 7 clusters)
+
+Depending on the inputs the app will cluster the observations into the number of clusters specified.
+
+```{r }
+summary(iris)
+head(iris)
+```
+For example if the user selects x variable - Sepal.Length and y variable - Sepal.Width along with cluster size of 3, the following kmeans will be generated and graphed.
+
+```{r echo=FALSE, warning=FALSE}
+kmeans(iris$Sepal.Length,iris$Sepal.Width, centers=3)
+```
+The corresponding graph is shown below.
+```{r echo=FALSE, warning=FALSE}
+plot(iris$Sepal.Length,iris$Sepal.Width,col=3,pch=20,cex=1,points(3, pch=3, cex=4, lwd=2))
+```
+
+## Conclusion
+We used shiny application to demonstrate how flexible the output can be based on the input parameters selected by the user. Clustering using K means have been used to cluster the data from the IRIS dataset based on the inputs selected.
+
